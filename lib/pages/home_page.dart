@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Container(
-          child: Text("Welcome to 30 days of flutter"),
+          child: Text("Welcome to 30 days of flutter by sam"),
         ),
       ),
       drawer: Drawer(),
