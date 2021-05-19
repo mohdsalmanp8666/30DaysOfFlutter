@@ -8,18 +8,62 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Center(
-          child: Text(
-            "Login Page",
+    return Material(
+      color: Colors.white,
+      // color: Colors.grey.shade600,
+      child: Column(
+        children: [
+          Image.asset(
+            "assets/images/undraw_secure_login_pdn4.png",
+            fit: BoxFit.cover,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Welcome",
             style: TextStyle(
-              fontSize: 40,
-              color: Colors.blue,
+              fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
           ),
-        ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 32,
+              vertical: 16,
+            ),
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Enter Username",
+                    labelText: "Username",
+                  ),
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: "Enter Password",
+                    labelText: "Password",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print("Login Pressed");
+                  },
+                  child: Text("Login"),
+                  style: TextButton.styleFrom(),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
