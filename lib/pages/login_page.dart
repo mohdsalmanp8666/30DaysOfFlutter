@@ -13,6 +13,9 @@ class _LoginPageState extends State<LoginPage> {
       // color: Colors.grey.shade600,
       child: Column(
         children: [
+          SizedBox(
+            height: 20,
+          ),
           Image.asset(
             "assets/images/undraw_secure_login_pdn4.png",
             fit: BoxFit.cover,
